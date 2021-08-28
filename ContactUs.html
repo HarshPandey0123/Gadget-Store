@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel=stylesheet href="style.css">
+</head>
+<body class="Contact">
+	<header>
+        <nav>
+          <a href="HomePage.html"><div class="logo"> <img src="images\logo.jpg" alt="Logo"><p>Gadgets Store</p></div></a>
+            <div class="menu">
+            <ul>
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="Gadgets.html">Store</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#" class="active">Contact Us</a></li>
+            </ul>
+        </div>.
+    </nav>
+  </header>
+                <div class="con">
+                	<form class="box" id="box1" onsubmit="return validate()">
+                		<h1>Contact us</h1>
+                		<h3>If you want more information fill in this form.<br>
+							Please fill in all required fields.</h3>
+                		<label>Your Name&nbsp;</label><input type="text" name="nam" id="nam"><br>
+                		<label>Your Email&nbsp;</label><input type="email" name="mail"><br>
+                		<label>Phone No&nbsp;</label><input type="number" name="mobile"><br>
+                		<label>Describe Your Request</label><textarea id="area"></textarea><br>
+                		<button value="submit">Submit</button>
+
+                	</form>
+                </div>
+                <script type="text/javascript">
+                    function validate() {
+                    var name=document.forms["box1"]["nam"];
+                    var email=document.forms["box1"]["mail"];.
+                    var mob=document.forms["box1"]["mobile"];
+                    var text=document.forms["box1"]["area"];
+                    if(name.value=="" ||email.value==""){
+                        alert("Fields cannot be empty");
+                        return false;
+                    }
+                    if (mob.value==""|| mob.value.length!=10) {
+                        alert("invalid no");
+                        return false;
+                    }
+                    if(text.value.length<=20){
+                        alert("Tha problem should be minium 20 character");
+                        return false;
+                     }   
+                    return true;
+                }
+                </script>
+            
+</body>
+</html>

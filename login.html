@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel=stylesheet href="style.css">
+</head>
+<body class="login">
+	<header>
+        <nav>
+          <a href="HomePage.html"><div class="logo"> <img src="images\logo.jpg" alt="Logo"><p>Gadgets Store</p></div></a>
+            <div class="menu">
+            <ul>
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="Gadgets.html">Store</a></li>
+                <li><a class="active" href="#">Login</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+    <div class="contain">
+    <form class="form1" id="form1" onsubmit="return validForm()">
+    	<h1 id="log">LOGIN</h1>
+    	<input type="text" name="user" id="ser" placeholder="Username" class="box"><br> <!-- harsh -->
+    	<input type="password" name="pass" id="pass" placeholder="Password" class="box"><br>
+    	<button type="submit" id="submit">Log In</button>
+    </form>
+    <span id="dont">Don't have an Account?</span><a id="reg" href="register.html">Register</a>
+    </div>
+    <script type="text/javascript">
+    	function validForm() {
+    		var use=document.forms["form1"]["user"];
+    		var pas=document.forms["form1"]["pass"];
+    		if (use.value=="") {
+    			alert("UserName cannot be empty");
+    			return false;
+    		}
+    		if(pas.value==""){
+    			alert("Password Field cannot be empty");
+    			return false;
+    		}
+    	}
+    </script>
+</body>
+</html>
